@@ -2,7 +2,7 @@ package util
 
 import "strings"
 
-func GetPersianMonthLetter(monthNumber string) string {
+func GetIranianMonthLetter(monthNumber string) string {
 	monthNumber = ChangeDigit(monthNumber, English)
 	outputText := ""
 	if string(monthNumber[0]) == "0" {

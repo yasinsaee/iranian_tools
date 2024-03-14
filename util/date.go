@@ -1,6 +1,9 @@
 package util
 
-import "strings"
+import (
+	"strings"
+	"time"
+)
 
 func GetIranianMonthLetter(monthNumber string) string {
 	monthNumber = ChangeDigit(monthNumber, English)
@@ -69,4 +72,39 @@ func ChangeDigit(input string, lang NumStrLanguage) string {
 		input = strings.ReplaceAll(input, "9", "۹")
 	}
 	return input
+}
+
+// نمایش اختلاف بین دو تاریخ به صورت خلاصه وار و متنی
+func DifferenceDate(inputDatetime time.Time) string {
+	systemDatetime := time.Now()
+
+	differenceInDays := int(systemDatetime.Sub(inputDatetime).Hours() / 24)
+	if differenceInDays > 7 {
+		if differenceInDays > 7 && differenceInDays < 14 {
+			return "هفته پیش"
+		} else if differenceInDays < 7*4 {
+			return "چند هفته پیش"
+		} else if differenceInDays >= 30 && differenceInDays < 60 {
+			return "ماه پیش"
+		} else if differenceInDays < 365 {
+			return "چند ماه پیش"
+		} else if differenceInDays >= 365 && differenceInDays < 730 {
+			return "سال پیش"
+		} else {
+			return "چند سال پیش"
+		}
+	} else {
+		differenceInSeconds := int(systemDatetime.Sub(inputDatetime).Seconds())
+		if differenceInSeconds < 60 {
+			return "لحظاتی پیش"
+		} else if differenceInSeconds < 60*60 {
+			return "دقایقی پیش"
+		} else if differenceInSeconds < 3600*24 {
+			return "ساعاتی پیش"
+		} else if differenceInDays == 1 {
+			return "دیروز"
+		} else {
+			return "چند روز پیش"
+		}
+	}
 }

@@ -1,7 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"iranian_tools/util/calendar"
+	"time"
+)
 
 func main() {
-	fmt.Println("Hello, World!")
+
+	ti := time.Now()
+	t := calendar.FormatIranian(ti)
+
+	// t.Print()
+	t.PrintText()
 }

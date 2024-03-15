@@ -20,4 +20,5 @@ To use IranianTools in your Go project, you can simply import it:
 go get github.com/YasinSaee/iranian_tools
 ```
 
-Usage Examples
+# Usage Examples
+## ConvertToEnglishDigit

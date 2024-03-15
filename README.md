@@ -89,3 +89,7 @@ go get github.com/YasinSaee/iranian_tools
 ## Contribution
 
 Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](https://github.com/YasinSaee/iranian_tools/blob/main/LICENSE) - see the [LICENSE](LICENSE) file for details.

@@ -7,7 +7,12 @@ import (
 	"strings"
 )
 
-type NumStrLanguage int
+type (
+	NumStrLanguage int
+	CustomFloat64  float64
+	CustomInt      int
+	CustomString   string
+)
 
 const (
 	English NumStrLanguage = iota
@@ -198,4 +203,45 @@ func ConvertNumberToText(number string) (string, error) {
 	}
 
 	return resultStr, nil
+}
+
+func (number *CustomInt) SeparateDigits(divLen int) string {
+	strNum := strconv.Itoa(int(*number))
+	return SeparateDigits(strNum, divLen)
+}
+
+func (number *CustomFloat64) SeparateDigits(divLen int) string {
+	strNum := strconv.FormatFloat(float64(*number), 'f', -1, 64)
+	return SeparateDigits(strNum, divLen)
+}
+
+func SeparateDigits(strNum string, divLen int) string {
+	decimalIndex := -1
+	for i, char := range strNum {
+		if char == '.' {
+			decimalIndex = i
+			break
+		}
+	}
+
+	if decimalIndex == -1 {
+		decimalIndex = len(strNum)
+	}
+
+	result := ""
+
+	digitCounter := 0
+
+	for i := decimalIndex - 1; i >= 0; i-- {
+		result = string(strNum[i]) + result
+
+		digitCounter++
+
+		if digitCounter == divLen && i != 0 {
+			result = "," + result
+			digitCounter = 0
+		}
+	}
+
+	return result
 }

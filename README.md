@@ -12,7 +12,7 @@ IranianTools is a versatile Go package designed for developers working with the 
 - **Convert Gregorian Year to Jalali (Shamsi) Year**: Convert Gregorian calendar years to Jalali years and vice versa.
 - **... and more!**
 
-# Installation
+## Installation
 
 To use IranianTools in your Go project, you can simply import it:
 
@@ -20,8 +20,9 @@ To use IranianTools in your Go project, you can simply import it:
 go get github.com/YasinSaee/iranian_tools
 ```
 
-# Usage Examples
-  - ## ConvertToEnglishDigit
+## Usage Examples 
+- ### Number
+  - ### ConvertToEnglishDigit
     This function converts a string containing Persian digits to a string containing English digits.
     Example:
     
@@ -29,7 +30,7 @@ go get github.com/YasinSaee/iranian_tools
     englishNumber, _ := iranian_tools.ChangeToEnglishDigit("۱۲۳۴۵۶")
     fmt.Println(englishNumber) // Output: 123456
     ```
-  - ## ConvertToPersianDigit
+  - ### ConvertToPersianDigit
     This function converts a string containing English digits to a string containing Persian digits.
     Example:
     
@@ -37,7 +38,7 @@ go get github.com/YasinSaee/iranian_tools
     persianNumber, _ := iranian_tools.ChangeToPersianDigit("123456")
     fmt.Println(persianNumber) // Output: ۱۲۳۴۵۶
     ```
-  - ## ConvertNumberToPersianLetters
+  - ### ConvertNumberToPersianLetters
     This function converts a string containing digits to their equivalent words in Persian.
     Example:
     
@@ -46,5 +47,35 @@ go get github.com/YasinSaee/iranian_tools
     fmt.Println(persianWord) // Output: صد و پنجاه و چهار
     ```
 
+- ### Validations
+
+  - ### CheckCellPhone
+    This function validates Iranian phone numbers.
+    Example:
+
+    ```go
+    ok := iranian_tools.CheckCellPhone("09039686577")
+    fmt.Println(ok) // Output: true or false
+    ```
+    
+  - ### CheckPostalCode
+    This function validates Iranian postal codes.
+    Example:
+
+    ```go
+    ok := iranian_tools.CheckPostalCode("123456789") // Please set valid postalCode
+    fmt.Println(ok) // Output: true or false
+    ```
+    
+  - ### CheckNationalCode
+    This function validates Iranian national codes.
+    Example:
+
+    ```go
+    ok := iranian_tools.CheckNationalCode("5858960707")
+    fmt.Println(ok) // Output: true or false
+    ```
+
+    
 
 

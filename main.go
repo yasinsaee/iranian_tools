@@ -1,8 +1,9 @@
 package main
 
 import (
-	"iranian_tools/util/calendar"
 	"time"
+
+	"github.com/YasinSaee/iranian_tools/util/calendar"
 )
 
 func main() {

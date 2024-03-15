@@ -75,7 +75,16 @@ go get github.com/YasinSaee/iranian_tools
     ok := iranian_tools.CheckNationalCode("5858960707")
     fmt.Println(ok) // Output: true or false
     ```
-
+- ### Calendar
+  - ### ChangeToJalali
+     Converts a Gregorian date to Jalali (Iranian) calendar.
+      
+     Example :
+     ```go
+     ti := time.Now()
+     jalaliDate := iranian_tools.ChangeToJalali(ti)
+     fmt.Printf("%d/%02d/%02d", jalaliDate.Year, jalaliDate.Month, jalaliDate.Day) // Output: 1402/12/25
+     ```
     
 
 

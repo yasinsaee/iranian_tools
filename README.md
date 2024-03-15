@@ -11,3 +11,11 @@ IranianTools is a versatile Go package designed for developers working with the 
 - **Bank Name Recognition**: Recognize the bank name from a given credit card number.
 - **Convert Gregorian Year to Jalali (Shamsi) Year**: Convert Gregorian calendar years to Jalali years and vice versa.
 - **... and more!**
+
+# Installation
+
+go get github.com/YasinSaee/iranian_tools
+
+# Contribution
+
+Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.

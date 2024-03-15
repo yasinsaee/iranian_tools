@@ -46,6 +46,14 @@ go get github.com/YasinSaee/iranian_tools
     persianWord, _ := iranian_tools.ConvertNumberToWord("154")
     fmt.Println(persianWord) // Output: صد و پنجاه و چهار
     ```
+  - ### SeparateDigits
+    SeparateDigits separates the digits of a number according to a custom length.
+
+    Example :
+    ```go
+    myNumber := 1259959
+    fmt.Println(iranian_tools.SeparateDigits(myNumber, 4)) // Output: 125,9959
+    ```
 - ### Validations
 
   - ### CheckCellPhone
@@ -98,7 +106,6 @@ go get github.com/YasinSaee/iranian_tools
     ```
     You can print amount with seprate with commas like this :
     ```go
-     am, _ := iranian_tools.ConvertCurrency(iranian_tools.TomanCurrency, iranian_tools.RialCurrency, 560000)
      fmt.Println(am.SeparateDigits(3)) // Output: 56,000
     ```
 

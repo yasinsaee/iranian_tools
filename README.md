@@ -14,21 +14,7 @@ IranianTools is a versatile Go package designed for developers working with the 
 
 # Installation
 
+To use IranianTools in your Go project, you can simply import it:
+
+```bash
 go get github.com/YasinSaee/iranian_tools
-
-## Usage Examples
-### ConvertToEnglishDigit
-
-This function converts a string containing Persian digits to a string containing English digits.
-
-Example:
-```go
-t, err := iranian_tools.ChangeToEnglishDigit("۱۲۳۴۵۶")
-if err != nil {
-    fmt.Println(err)
-}
-fmt.Println(t)
-
-# Contribution
-
-Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.

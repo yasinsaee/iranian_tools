@@ -9,7 +9,15 @@ const (
 	Persian
 )
 
-func ChangeDigit(input string, lang NumStrLanguage) string {
+func ChangeToEnglishDigit(number string) string {
+	return changeDigit(number, English)
+}
+
+func ChangeToPersianDigit(number string) string {
+	return changeDigit(number, Persian)
+}
+
+func changeDigit(input string, lang NumStrLanguage) string {
 	if lang == English {
 		input = strings.ReplaceAll(input, "۰", "0")
 		input = strings.ReplaceAll(input, "۱", "1")

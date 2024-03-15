@@ -1,7 +1,7 @@
 package util
 
-// get bank name from card number
-// its return just the bank name
+// دریافت اسم بانک از شماره کارت
+// این متود فقط میتواند اسم بانک را از شماره کارت تشخیص دهد و کارایی دیگری ندارد
 func GetBankNameFromCardNumber(cardNumber string) string {
 	if len(cardNumber) < 6 {
 		return "-"

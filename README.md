@@ -17,4 +17,6 @@ IranianTools is a versatile Go package designed for developers working with the 
 To use IranianTools in your Go project, you can simply import it:
 
 ```bash
-go get github.com/YasinSaee/iranian_tools
+go get github.com/YasinSaee/iranian_tools‍‍‍
+
+Usage Examples

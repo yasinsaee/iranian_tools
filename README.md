@@ -24,20 +24,26 @@ go get github.com/YasinSaee/iranian_tools
   - ## ConvertToEnglishDigit
     This function converts a string containing Persian digits to a string containing English digits.
     Example:
+    
     ```go
     englishNumber, _ := iranian_tools.ChangeToEnglishDigit("۱۲۳۴۵۶")
+    fmt.Println(englishNumber) // Output: 123456
     ```
   - ## ConvertToPersianDigit
     This function converts a string containing English digits to a string containing Persian digits.
     Example:
+    
     ```go
     persianNumber, _ := iranian_tools.ChangeToPersianDigit("123456")
+    fmt.Println(persianNumber) // Output: ۱۲۳۴۵۶
     ```
   - ## ConvertNumberToPersianLetters
     This function converts a string containing digits to their equivalent words in Persian.
     Example:
+    
     ```go
     persianWord, _ := iranian_tools.ConvertNumberToWord("154")
+    fmt.Println(persianWord) // Output: صد و پنجاه و چهار
     ```
 
 

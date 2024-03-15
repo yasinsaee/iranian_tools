@@ -96,6 +96,12 @@ go get github.com/YasinSaee/iranian_tools
      am, _ := iranian_tools.ConvertCurrency(iranian_tools.TomanCurrency, iranian_tools.RialCurrency, 560000)
      fmt.Println(am) // Output: 56000
     ```
+    you can print amount with seprate with commas like this
+        ```go
+     am, _ := iranian_tools.ConvertCurrency(iranian_tools.TomanCurrency, iranian_tools.RialCurrency, 560000)
+     fmt.Println(am.SeparateDigits(3)) // Output: 56,000
+    ```
+    
 ## Contribution
 
 Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.

@@ -19,7 +19,7 @@ func TestChangeToPersianDigit(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := ChangeToPersianDigit(tt.args.number); got != tt.want {
+			if got, _ := ChangeToPersianDigit(tt.args.number); got != tt.want {
 				t.Errorf("ChangeToPersianDigit() = %v, want %v", got, tt.want)
 			}
 		})

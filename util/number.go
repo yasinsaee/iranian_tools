@@ -1,6 +1,10 @@
 package util
 
-import "strings"
+import (
+	"errors"
+	"regexp"
+	"strings"
+)
 
 type NumStrLanguage int
 
@@ -9,7 +13,12 @@ const (
 	Persian
 )
 
-func ChangeDigit(input string, lang NumStrLanguage) string {
+// این فانکشن می تواند اعداد انگلیسی را به فارسی
+// و برعکس آن یعنی از فارسی به انگلیسی تبدیل کند.
+func ChangeDigit(input string, lang NumStrLanguage) (string, error) {
+	if !IsNumeric(input) {
+		return "", errors.New("please use number")
+	}
 	if lang == English {
 		input = strings.ReplaceAll(input, "۰", "0")
 		input = strings.ReplaceAll(input, "۱", "1")
@@ -33,5 +42,11 @@ func ChangeDigit(input string, lang NumStrLanguage) string {
 		input = strings.ReplaceAll(input, "8", "۸")
 		input = strings.ReplaceAll(input, "9", "۹")
 	}
-	return input
+	return input, nil
+}
+
+// چک کردن متن که حتما به صورت اعداد فارسی یا انگلیسی وارد شده باشد.
+func IsNumeric(s string) bool {
+	match, _ := regexp.MatchString("^[0-9۰-۹]*$", s)
+	return match
 }

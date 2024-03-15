@@ -24,24 +24,24 @@ go get github.com/YasinSaee/iranian_tools
 - ### Number
   - ### ConvertToEnglishDigit
     This function converts a string containing Persian digits to a string containing English digits.
-    Example:
     
+    Example:
     ```go
     englishNumber, _ := iranian_tools.ChangeToEnglishDigit("۱۲۳۴۵۶")
     fmt.Println(englishNumber) // Output: 123456
     ```
   - ### ConvertToPersianDigit
     This function converts a string containing English digits to a string containing Persian digits.
-    Example:
     
+    Example:
     ```go
     persianNumber, _ := iranian_tools.ChangeToPersianDigit("123456")
     fmt.Println(persianNumber) // Output: ۱۲۳۴۵۶
     ```
   - ### ConvertNumberToPersianLetters
     This function converts a string containing digits to their equivalent words in Persian.
-    Example:
     
+    Example:
     ```go
     persianWord, _ := iranian_tools.ConvertNumberToWord("154")
     fmt.Println(persianWord) // Output: صد و پنجاه و چهار
@@ -51,8 +51,8 @@ go get github.com/YasinSaee/iranian_tools
 
   - ### CheckCellPhone
     This function validates Iranian phone numbers.
+    
     Example:
-
     ```go
     ok := iranian_tools.CheckCellPhone("09039686577")
     fmt.Println(ok) // Output: true or false
@@ -60,8 +60,8 @@ go get github.com/YasinSaee/iranian_tools
     
   - ### CheckPostalCode
     This function validates Iranian postal codes.
+    
     Example:
-
     ```go
     ok := iranian_tools.CheckPostalCode("123456789") // Please set valid postalCode
     fmt.Println(ok) // Output: true or false
@@ -69,8 +69,8 @@ go get github.com/YasinSaee/iranian_tools
     
   - ### CheckNationalCode
     This function validates Iranian national codes.
+    
     Example:
-
     ```go
     ok := iranian_tools.CheckNationalCode("5858960707")
     fmt.Println(ok) // Output: true or false

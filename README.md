@@ -10,7 +10,7 @@ IranianTools is a versatile Go package designed for developers working with the 
 - **National ID Validation**: Validate Iranian national identification numbers (Melli Code).
 - **Bank Name Recognition**: Recognize the bank name from a given credit card number.
 - **Convert Gregorian Year to Jalali (Shamsi) Year**: Convert Gregorian calendar years to Jalali years and vice versa.
-- ** and more ...!**
+- **and more ...!**
 
 ## Installation
 

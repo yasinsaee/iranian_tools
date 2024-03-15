@@ -46,7 +46,6 @@ go get github.com/YasinSaee/iranian_tools
     persianWord, _ := iranian_tools.ConvertNumberToWord("154")
     fmt.Println(persianWord) // Output: صد و پنجاه و چهار
     ```
-
 - ### Validations
 
   - ### CheckCellPhone
@@ -85,11 +84,18 @@ go get github.com/YasinSaee/iranian_tools
      jalaliDate := iranian_tools.ChangeToJalali(ti)
      fmt.Printf("%d/%02d/%02d", jalaliDate.Year, jalaliDate.Month, jalaliDate.Day) // Output: 1402/12/25
      ```
+- ### Currency
+  - ### ConvertCurrency
+    This function is used to convert currency from one unit to another.
+    Just :
+    Rial To Toman 
+    Toman To Rial
 
+    Example : 
+    ```go
+     am, _ := iranian_tools.ConvertCurrency(iranian_tools.TomanCurrency, iranian_tools.RialCurrency, 560000)
+     fmt.Println(am) // Output: 56000
+    ```
 ## Contribution
 
 Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the [MIT License](https://github.com/YasinSaee/iranian_tools/blob/main/LICENSE) - see the [LICENSE](LICENSE) file for details.

@@ -54,7 +54,7 @@ go get github.com/YasinSaee/iranian_tools
     
     Example:
     ```go
-    ok := iranian_tools.CheckCellPhone("09039686577")
+    ok := iranian_tools.CheckCellPhone("09030000000")
     fmt.Println(ok) // Output: true or false
     ```
     

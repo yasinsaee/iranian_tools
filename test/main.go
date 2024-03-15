@@ -9,21 +9,17 @@ import (
 
 func main() {
 
-	t, err := iranian_tools.ChangeToEnglishDigit("۱۲۳۴۵۶")
-	if err != nil {
-		fmt.Println(err)
-	}
-	fmt.Println(t)
+	englishNumber, _ := iranian_tools.ChangeToEnglishDigit("۱۲۳۴۵۶")
+	fmt.Println(englishNumber) // Output: 123456
 
 	//----------------------------------------------------------------
-
-	ok := iranian_tools.CheckCellPhone("09039686577")
-	fmt.Println(ok)
-
+	
+	ok := iranian_tools.CheckCellPhone("09030000000")
+	fmt.Println(ok) // Output: true or false
 	//----------------------------------------------------------------
 
 	ti := time.Now()
-	time := iranian_tools.ChangeToJalali(ti)
-	fmt.Println(time.Year)
+	jalaliDate := iranian_tools.ChangeToJalali(ti)
+	fmt.Printf("%d/%02d/%02d", jalaliDate.Year, jalaliDate.Month, jalaliDate.Day) // Output: 1402/12/25
 
 }

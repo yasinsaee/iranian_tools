@@ -12,7 +12,7 @@ func ChangeToPersianDigit(number string) (string, error) {
 	return util.ChangeDigit(number, util.Persian)
 }
 
-// تبدیل اعداد به حروف
+// تبدیل اعداد به حروف فارسی
 func ConvertNumberToWord(number string) (string, error) {
 	return util.ConvertNumberToText(number)
 }

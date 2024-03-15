@@ -11,3 +11,8 @@ func ChangeToEnglishDigit(number string) (string, error) {
 func ChangeToPersianDigit(number string) (string, error) {
 	return util.ChangeDigit(number, util.Persian)
 }
+
+// تبدیل اعداد به حروف
+func ConvertNumberToWord(number string) (string, error) {
+	return util.ConvertNumberToText(number)
+}

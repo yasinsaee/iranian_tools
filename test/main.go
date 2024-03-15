@@ -22,5 +22,9 @@ func main() {
 	// fmt.Printf("%d/%02d/%02d", jalaliDate.Year, jalaliDate.Month, jalaliDate.Day) // Output: 1402/12/25
 
 	am, _ := iranian_tools.ConvertCurrency(iranian_tools.TomanCurrency, iranian_tools.RialCurrency, 560000)
-	fmt.Println(am.SeparateDigits(4))
+	fmt.Println(am.SeparateDigits(3))
+
+	var amount float64
+	amount = float64(am)
+	fmt.Println(amount)
 }

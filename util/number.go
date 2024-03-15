@@ -207,16 +207,25 @@ func ConvertNumberToText(number string) (string, error) {
 	return resultStr, nil
 }
 
+// .جدا کردن اعداد از هم به صورت کاستوم
+// divLen عدد شما را به صورت دلخواه می تواند تغییر دهد.
+// به عنوان مثال ۳ رقم رقم یا ۲ رقم
 func (number *CustomInt) SeparateDigits(divLen int) string {
 	strNum := strconv.Itoa(int(*number))
 	return SeparateDigits(strNum, divLen)
 }
 
+// .جدا کردن اعداد از هم به صورت کاستوم
+// divLen عدد شما را به صورت دلخواه می تواند تغییر دهد.
+// به عنوان مثال ۳ رقم رقم یا ۲ رقم
 func (number *CustomFloat64) SeparateDigits(divLen int) string {
 	strNum := strconv.FormatFloat(float64(*number), 'f', -1, 64)
 	return SeparateDigits(strNum, divLen)
 }
 
+// .جدا کردن اعداد از هم به صورت کاستوم
+// divLen عدد شما را به صورت دلخواه می تواند تغییر دهد.
+// به عنوان مثال ۳ رقم رقم یا ۲ رقم
 func SeparateDigits(strNum string, divLen int) string {
 	decimalIndex := -1
 	for i, char := range strNum {

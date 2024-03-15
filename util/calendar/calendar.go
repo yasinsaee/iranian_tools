@@ -11,7 +11,7 @@ type Month int
 // A Weekday specifies a day of the week starting from Shanbe = 0.
 type Weekday int
 
-// List of months in Iranian calendar.
+// لیست تاریخ ایرانیان
 const (
 	Farvardin Month = 1 + iota
 	Ordibehesht
@@ -27,7 +27,7 @@ const (
 	Esfand
 )
 
-// List of days in a week.
+// لیست روز های هفته در تاریخ ایرانیان
 const (
 	Shanbeh Weekday = iota
 	Yekshanbeh
@@ -38,6 +38,7 @@ const (
 	Jomeh
 )
 
+// لیست تاریخ ها به صورت متنی
 var months = [12]string{
 	"فروردین",
 	"اردیبهشت",
@@ -53,6 +54,7 @@ var months = [12]string{
 	"اسفند",
 }
 
+// لیست روز های هفته به صورت متنی
 var days = [7]string{
 	"شنبه",
 	"یک\u200cشنبه",
@@ -63,6 +65,7 @@ var days = [7]string{
 	"جمعه",
 }
 
+// ساختار تایم
 type Time struct {
 	Year    int
 	Month   Month
@@ -174,6 +177,7 @@ func Iran() *time.Location {
 	return loc
 }
 
+// دریافت روز های هفته از تاریخ میلادی به تاریخ جلالی
 func GetWeekday(wd time.Weekday) Weekday {
 	switch wd {
 	case time.Saturday:

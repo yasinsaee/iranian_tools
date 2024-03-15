@@ -15,6 +15,6 @@ func main() {
 	}
 	fmt.Println(t)
 
-	// t.Print()
-	// t.PrintText()
+	ok := iranian_tools.CheckCellPhone("09039686577")
+	fmt.Println(ok)
 }

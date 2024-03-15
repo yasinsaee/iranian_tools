@@ -1,4 +1,4 @@
-package util
+package iranian_tools
 
 import "testing"
 

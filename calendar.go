@@ -3,7 +3,7 @@ package iranian_tools
 import (
 	"time"
 
-	"github.com/YasinSaee/iranian_tools/util/calendar"
+	"github.com/yasinsaee/iranian_tools/util/calendar"
 )
 
 // تغییر تاریخ میلادی به تاریخ جلالی

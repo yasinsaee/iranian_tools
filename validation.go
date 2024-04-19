@@ -1,9 +1,9 @@
 package iranian_tools
 
 import (
-	"github.com/YasinSaee/iranian_tools/util/validators/national"
-	"github.com/YasinSaee/iranian_tools/util/validators/phone"
-	"github.com/YasinSaee/iranian_tools/util/validators/post"
+	"github.com/yasinsaee/iranian_tools/util/validators/national"
+	"github.com/yasinsaee/iranian_tools/util/validators/phone"
+	"github.com/yasinsaee/iranian_tools/util/validators/post"
 )
 
 // چک کردن شماره تلفن های ایرانی

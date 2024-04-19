@@ -1,6 +1,6 @@
 package iranian_tools
 
-import "github.com/YasinSaee/iranian_tools/util"
+import "github.com/yasinsaee/iranian_tools/util"
 
 // تبدیل قیمت از تومان به ریال
 // یا برعکس از ریال به تومان

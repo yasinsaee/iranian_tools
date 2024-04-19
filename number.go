@@ -3,7 +3,7 @@ package iranian_tools
 import (
 	"strconv"
 
-	"github.com/YasinSaee/iranian_tools/util"
+	"github.com/yasinsaee/iranian_tools/util"
 )
 
 // تغییر اعداد فارسی به انگلیسی
